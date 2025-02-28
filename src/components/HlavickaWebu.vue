@@ -1,6 +1,4 @@
-<script setup lang="ts">
 
-</script>
 
 <template>
 
@@ -10,7 +8,15 @@
 
 </template>
 
+<script setup lang="ts">
+const name = 'HlavickaWebu';
+</script>
 
 <style scoped>
+
+header
+{
+background-color:yellow;
+}
 
 </style>

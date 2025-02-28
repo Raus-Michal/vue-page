@@ -1,19 +1,26 @@
-<script setup lang="ts">
-import KartaProduktu from './components/KartaProduktu.vue'
-import HlavickaWebu from './components/HlavickaWebu.vue'
-</script>
+
 
 
 
 <template>
-<HlavickaWebu />
+<div id="app">
+<nav>
+<router-link to="/">Domů</router-link> |
+<router-link to="/seznam-clanku/">Seznam článků</router-link> |
+<router-link to="/deatails/">Detail</router-link>
+</nav>
 
-<h1>Vyčištěný projekt</h1>
+<router-view /> <!-- Zde se vykreslí aktuální stránka podle URL -->
 
-<KartaProduktu />
 
+</div>
 </template>
 
+
+<script setup lang="ts">
+const name = 'App';
+
+</script>
 
 
 <style scoped>
