@@ -1,5 +1,4 @@
 <template>
-<!-- <HlavickaWebu /> -->
 
 <h1>Detaily článku</h1>
 
@@ -9,7 +8,6 @@
 
 <script setup lang="ts">
 // import KartaProduktu from '../components/KartaProduktu.vue'
-// import HlavickaWebu from '../components/HlavickaWebu.vue'
 
 const name = 'Details';
 
