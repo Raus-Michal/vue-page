@@ -8,9 +8,9 @@
 </div>
 
 <nav>
-<router-link to="/">Home</router-link>
-<router-link to="/seznam-clanku/">Seznam</router-link>
-<router-link to="/details/">Detail</router-link>
+<router-link title="Homepage" to="/">Home</router-link>
+<router-link title="Seznam článků" to="/seznam-clanku/">Seznam</router-link>
+<router-link title="Detail produktu" to="/details/">Detail</router-link>
 </nav>
 </header>
 

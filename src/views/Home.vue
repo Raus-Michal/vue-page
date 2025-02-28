@@ -1,7 +1,12 @@
 <template>
-<h1>Home page</h1>
 
+<div class="flex">
 <KartaProduktu />
+<KartaProduktu />
+<KartaProduktu />
+<KartaProduktu /> 
+</div>
+
 
 </template>
 
@@ -13,5 +18,14 @@ const name = 'Home';
 </script>
 
 <style scoped>
+.flex
+{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+align-items:center;
+gap:1rem;
+margin-bottom:1rem;
+}
 
 </style>

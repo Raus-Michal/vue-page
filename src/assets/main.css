@@ -171,6 +171,10 @@ legend{
 padding:0 .5rem;
 }
 
+*
+{
+box-sizing:border-box;
+}
 
 body
 {
@@ -229,6 +233,11 @@ height:auto;
 
 .logo-box
 {
-width:3rem;
+width:4rem;
 height:auto;
+}
+
+button
+{
+cursor:pointer;
 }
