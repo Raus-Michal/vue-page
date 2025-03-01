@@ -207,7 +207,7 @@ align-items:center;
 {
 header
 {
-padding:1rem 12% 1rem 2%;
+padding:1rem 15% 1rem 3%;
 }}
 
 nav
@@ -219,6 +219,7 @@ text-transform:uppercase;
 
 nav a,nav a:link,nav a:visited,nav a:active
 {
+font-size:1rem;
 text-decoration:none;
 color:black;
 font-weight:500;
@@ -233,7 +234,7 @@ height:auto;
 
 .logo-box
 {
-width:4rem;
+width:5rem;
 height:auto;
 }
 
