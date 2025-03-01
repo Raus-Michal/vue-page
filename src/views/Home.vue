@@ -4,15 +4,7 @@
   </div>
 
   <div class="con-clanky">
-    <KartaClanku />
-    <KartaClanku />
-    <KartaClanku />
-    <KartaClanku />
-    <KartaClanku />
-    <KartaClanku />
-    <KartaClanku />
-    <KartaClanku />
-    <KartaClanku />
+    <KartaClanku  v-for="(item, index) in karty" :key="index" :cesta="item.src" :nadpis="item.nadpis" :title="item.title" />
   </div>
 </template>
 
@@ -29,10 +21,18 @@ title:string;
 nadpis:string;
 }
 
-const produkty = ref<Produkt[]>([]);
+interface Karty{
+id:number;
+src:string;
+title:string;
+nadpis:string;
+}
 
-const fetchJSON = async (): Promise<Produkt[]> => {
-  const jsonFilePath = "/data/produkty.json"; // Opravená cesta (NE `./public/...`)
+const produkty = ref<Produkt[]>([]);
+const karty = ref<Produkt[]>([]);
+
+const fetchJSON = async (src_json:string): Promise<Produkt[]> => {
+  const jsonFilePath = src_json; // Opravená cesta (NE `./public/...`)
   try {
     const response = await fetch(jsonFilePath);
     if (!response.ok) throw new Error("Síťová odpověď nebyla v pořádku");
@@ -46,8 +46,10 @@ const fetchJSON = async (): Promise<Produkt[]> => {
 };
 
 onMounted(async () => {
-  produkty.value = await fetchJSON();
-  console.log("Načtená data:", produkty.value);
+  produkty.value = await fetchJSON("/data/produkty.json");
+  karty.value = await fetchJSON("/data/karty.json");
+  console.log("Načtené produkti:", produkty.value);
+  console.log("Načtené karty:", karty.value);
 });
 </script>
 

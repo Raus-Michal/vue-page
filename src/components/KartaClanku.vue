@@ -8,7 +8,7 @@
 <div class="con">
 
 <div class="img-box">
-<p>Obrázek z API - 300px X auto</p>
+<img class="img-produktu" width="300" height="500" :src="cesta" alt="test">
 </div>
 
 <div class="con-other">
@@ -31,6 +31,21 @@
 </template>
 
 <script setup lang="ts">
+
+import { toRefs } from 'vue';
+
+import { reactive } from "vue";
+
+const props = defineProps<{
+  cesta: string;
+  title: string;
+  nadpis: string;
+}>();
+
+// Zajistí reaktivitu props
+const state = reactive({ ...props });
+
+
 const name = 'KartaClanku';
 </script>
 

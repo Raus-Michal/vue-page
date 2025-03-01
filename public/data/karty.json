@@ -1,0 +1,13 @@
+{
+"data":
+[
+{"id":1,"src":"/img-produkty/produkt-1.webp","title":"Title-Karta1","nadpis":"Nadpis-Karta1"},
+{"id":2,"src":"/img-produkty/produkt-2.webp","title":"Title-Karta2","nadpis":"Nadpis-Karta2"},
+{"id":3,"src":"/img-produkty/produkt-3.webp","title":"Title-Karta3","nadpis":"Nadpis-Karta3"},
+{"id":4,"src":"/img-produkty/produkt-4.webp","title":"Title-Karta4","nadpis":"Nadpis-Karta4"},
+{"id":5,"src":"/img-produkty/produkt-1.webp","title":"Title-Karta1","nadpis":"Nadpis-Karta1"},
+{"id":6,"src":"/img-produkty/produkt-2.webp","title":"Title-Karta2","nadpis":"Nadpis-Karta2"},
+{"id":7,"src":"/img-produkty/produkt-3.webp","title":"Title-Karta3","nadpis":"Nadpis-Karta3"},
+{"id":8,"src":"/img-produkty/produkt-4.webp","title":"Title-Karta4","nadpis":"Nadpis-Karta4"}
+]
+}

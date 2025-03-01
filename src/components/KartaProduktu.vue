@@ -21,23 +21,18 @@
 </template>
 
 <script setup lang="ts">
+import { toRefs } from 'vue';
 
+import { reactive } from "vue";
 
-defineProps({
-  cesta: {
-    type: String,
-    default: ""
-  },
-    title: {
-    type: String,
-    default: ""
-  },
-    nadpis: {
-    type: String,
-    default: ""
-  }
+const props = defineProps<{
+  cesta: string;
+  title: string;
+  nadpis: string;
+}>();
 
-});
+// Zajistí reaktivitu props
+const state = reactive({ ...props });
 
 
 
