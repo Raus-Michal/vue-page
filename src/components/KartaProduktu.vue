@@ -5,11 +5,10 @@
 
 <template>
 <div class="karta">
+<img class="img-produktu" :src="cesta" alt="test">
 <div class="con">
-
-<p>Lifestyle</p>
-<p>Popisek - data budou dodána z JSON - API</p>
-
+<p>{{ nadpis }}</p>
+<p>{{ title }}</p>
 <div>
 <button type="button" title="Číst víc" ><span>Read More</span></button>
 </div>
@@ -22,6 +21,26 @@
 </template>
 
 <script setup lang="ts">
+
+
+defineProps({
+  cesta: {
+    type: String,
+    default: ""
+  },
+    title: {
+    type: String,
+    default: ""
+  },
+    nadpis: {
+    type: String,
+    default: ""
+  }
+
+});
+
+
+
 const name = 'KartaProduktu';
 </script>
 
@@ -29,13 +48,24 @@ const name = 'KartaProduktu';
 
 .karta
 {
+position:relative;
 display:flex;
 align-items:flex-end;
+justify-content:center;
 width:100%;
 min-width:280px;
 max-width:400px;
 height:500px;
-background-color:grey;
+background-color:transparent;
+}
+
+.img-produktu
+{
+position:absolute;
+min-width:280px;
+max-width:400px;
+height:500px;
+z-index:-1;
 }
 
 .con

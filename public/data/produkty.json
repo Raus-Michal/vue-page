@@ -1,9 +1,9 @@
 {
 "data":
 [
-{"id":1,"src":"cesta1","title":"město","nadpis":"Text1"},
-{"id":2,"src":"cesta2","title":"velkoměsto","nadpis":"Text2"},
-{"id":3,"src":"cesta3","title":"metropole","nadpis":"Text3"},
-{"id":4,"src":"cesta4","title":"vesnice","nadpis":"Text4"}
+{"id":1,"src":"/img-produkty/produkt-1.webp","title":"město","nadpis":"Text1"},
+{"id":2,"src":"/img-produkty/produkt-2.webp","title":"velkoměsto","nadpis":"Text2"},
+{"id":3,"src":"/img-produkty/produkt-3.webp","title":"metropole","nadpis":"Text3"},
+{"id":4,"src":"/img-produkty/produkt-4.webp","title":"vesnice","nadpis":"Text4"}
 ]
 }
