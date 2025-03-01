@@ -5,7 +5,7 @@
 
 <template>
 <div class="karta">
-<img class="img-produktu" :src="cesta" alt="test">
+<img class="img-produktu" width="500" height="400" :src="cesta" alt="test">
 <div class="con">
 <p>{{ nadpis }}</p>
 <p>{{ title }}</p>
@@ -57,6 +57,7 @@ min-width:280px;
 max-width:400px;
 height:500px;
 background-color:transparent;
+aspect-ratio:4/5;
 }
 
 .img-produktu
@@ -64,8 +65,9 @@ background-color:transparent;
 position:absolute;
 min-width:280px;
 max-width:400px;
-height:500px;
+height:auto;
 z-index:-1;
+aspect-ratio:4/5;
 }
 
 .con
