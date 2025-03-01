@@ -9,48 +9,14 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+
 import KartaProduktu from '../components/KartaProduktu.vue';
 import KartaClanku from '../components/KartaClanku.vue';
 
+import { useDataLoader } from "@/services/dataService";
 
-interface Produkt{
-id:number;
-src:string;
-title:string;
-nadpis:string;
-}
+const { produkty, karty } = useDataLoader();
 
-interface Karty{
-id:number;
-src:string;
-title:string;
-nadpis:string;
-}
-
-const produkty = ref<Produkt[]>([]);
-const karty = ref<Produkt[]>([]);
-
-const fetchJSON = async (src_json:string): Promise<Produkt[]> => {
-  const jsonFilePath = src_json; // Opravená cesta (NE `./public/...`)
-  try {
-    const response = await fetch(jsonFilePath);
-    if (!response.ok) throw new Error("Síťová odpověď nebyla v pořádku");
-
-    const jsonData: { data: Produkt[] } = await response.json();
-    return jsonData.data || []; // Vrátí prázdné pole, pokud není data
-  } catch (error) {
-    console.error("Chyba při načítání JSON:", error);
-    return [];
-  }
-};
-
-onMounted(async () => {
-  produkty.value = await fetchJSON("/data/produkty.json");
-  karty.value = await fetchJSON("/data/karty.json");
-  console.log("Načtené produkti:", produkty.value);
-  console.log("Načtené karty:", karty.value);
-});
 </script>
 
 <style scoped>
