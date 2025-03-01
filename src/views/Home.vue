@@ -21,15 +21,23 @@ import { ref, onMounted } from 'vue';
 import KartaProduktu from '../components/KartaProduktu.vue';
 import KartaClanku from '../components/KartaClanku.vue';
 
-const produkty = ref<{ id: number; src: string; title: string; nadpis: string }[]>([]);
 
-const fetchJSON = async (): Promise<any> => {
-  const jsonFilePath = "./data/produkty.json"; // Opravená cesta (NE `./public/...`)
+interface Produkt{
+id:number;
+src:string;
+title:string;
+nadpis:string;
+}
+
+const produkty = ref<Produkt[]>([]);
+
+const fetchJSON = async (): Promise<Produkt[]> => {
+  const jsonFilePath = "/data/produkty.json"; // Opravená cesta (NE `./public/...`)
   try {
     const response = await fetch(jsonFilePath);
     if (!response.ok) throw new Error("Síťová odpověď nebyla v pořádku");
 
-    const jsonData = await response.json();
+    const jsonData: { data: Produkt[] } = await response.json();
     return jsonData.data || []; // Vrátí prázdné pole, pokud není data
   } catch (error) {
     console.error("Chyba při načítání JSON:", error);
