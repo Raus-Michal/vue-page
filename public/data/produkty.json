@@ -1,9 +1,9 @@
 {
 "data":
 [
-{"id":1,"src":"/img-produkty/produkt-1.webp","title":"Na okraji města Vyškova","nadpis":"město"},
-{"id":2,"src":"/img-produkty/produkt-2.webp","title":"Úžasy a krásy Pekingu","nadpis":"velko-město"},
-{"id":3,"src":"/img-produkty/produkt-3.webp","title":"Nádherný Bagdát","nadpis":"metropole"},
-{"id":4,"src":"/img-produkty/produkt-4.webp","title":"Malebná vesnička Koko","nadpis":"vesnice"}
+{"id":1,"src":"/img-produkty/produkt-1","title":"Na okraji města Vyškova","nadpis":"město"},
+{"id":2,"src":"/img-produkty/produkt-2","title":"Úžasy a krásy Pekingu","nadpis":"velko-město"},
+{"id":3,"src":"/img-produkty/produkt-3","title":"Nádherný Bagdát","nadpis":"metropole"},
+{"id":4,"src":"/img-produkty/produkt-4","title":"Malebná vesnička Koko","nadpis":"vesnice"}
 ]
 }

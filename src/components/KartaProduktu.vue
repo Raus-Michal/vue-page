@@ -1,6 +1,14 @@
 <template>
 <div class="karta">
-<img class="img-produktu" width="500" height="400" :src="cesta" alt="test">
+
+<figure class="img-produktu">
+<picture>
+<source :srcset="`${cesta}.avif`" type="image/avif">
+<source :srcset="`${cesta}.webp`" type="image/webp">
+<img :src="`${cesta}.jpg`" width="400" height="500" :alt="`Obrázek ${title}`" loading="lazy">
+</picture>
+</figure>
+
 <div class="con">
 <p class="podnadpis">{{ nadpis }}</p>
 <p>{{ title }}</p>
@@ -16,14 +24,12 @@
 </template>
 
 <script setup lang="ts">
-import { toRefs } from 'vue';
-
 import { reactive } from "vue";
 
 const props = defineProps<{
-  cesta: string;
-  title: string;
-  nadpis: string;
+cesta: string;
+title: string;
+nadpis: string;
 }>();
 
 // Zajistí reaktivitu props
@@ -47,7 +53,6 @@ min-width:280px;
 max-width:400px;
 height:500px;
 background-color:transparent;
-aspect-ratio:4/5;
 }
 
 .img-produktu
@@ -57,7 +62,7 @@ min-width:280px;
 max-width:400px;
 height:auto;
 z-index:-1;
-aspect-ratio:4/5;
+aspect-ratio:1/1.25;
 }
 
 .con

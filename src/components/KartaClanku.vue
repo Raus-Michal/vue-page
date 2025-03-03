@@ -2,15 +2,18 @@
 <div class="karta">
 <div class="con">
 
-<div class="img-box">
-<img class="img-produktu" width="300" height="500" :src="cesta" alt="test">
-</div>
+<figure>
+<picture>
+<source :srcset="`${cesta}.avif`" type="image/avif">
+<source :srcset="`${cesta}.webp`" type="image/webp">
+<img :src="`${cesta}.jpg`" width="400" height="500" :alt="`Obrázek ${nadpis}`" loading="lazy">
+</picture>
+</figure>
 
 <div class="con-other">
-<p>TRAVEL</p>
-<p class="podnadpis">Nadpis - bude dodán z JSON API</p>
-<p class="text">Popisek bude dodán z JSON API - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-</p>
+<p class="big">Travel</p>
+<p class="podnadpis">{{ nadpis }}</p>
+<p class="text">{{ title }}</p>
 
 <div class="con-button">
 <button type="button" title="Číst víc" ><span>Read More</span></button>
@@ -26,20 +29,16 @@
 </template>
 
 <script setup lang="ts">
-
-import { toRefs } from 'vue';
-
 import { reactive } from "vue";
 
 const props = defineProps<{
-  cesta: string;
-  title: string;
-  nadpis: string;
+cesta: string;
+title: string;
+nadpis: string;
 }>();
 
 // Zajistí reaktivitu props
 const state = reactive({ ...props });
-
 
 const name = 'KartaClanku';
 </script>
@@ -55,15 +54,10 @@ background-color:transparent;
 margin-bottom:1rem;
 }
 
-.img-box /* tato class nejspíš zanikne jakmile se tam dodá obrázek */
+.big
 {
-width:100%;
-min-width:100%;
-height:300px; /* pouze dočasně - jakmile to bude img - bude výška auto */
-background-color:aqua;
-margin-bottom:1rem;
+text-transform:uppercase;
 }
-
 
 .con
 {
