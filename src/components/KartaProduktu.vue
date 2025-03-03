@@ -1,13 +1,8 @@
-
-
-
-
-
 <template>
 <div class="karta">
 <img class="img-produktu" width="500" height="400" :src="cesta" alt="test">
 <div class="con">
-<p>{{ nadpis }}</p>
+<p class="podnadpis">{{ nadpis }}</p>
 <p>{{ title }}</p>
 <div>
 <button type="button" title="Číst víc" ><span>Read More</span></button>
@@ -106,5 +101,10 @@ filter:transformY(-0.25rem);
 {
 display:block;
 transform: translateY(0.1rem);
+}
+
+.podnadpis
+{
+font-family:"nadpis",sans-serif;
 }
 </style>

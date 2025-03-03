@@ -1,8 +1,3 @@
-
-
-
-
-
 <template>
 <div class="karta">
 <div class="con">
@@ -13,7 +8,7 @@
 
 <div class="con-other">
 <p>TRAVEL</p>
-<p>Nadpis - bude dodán z JSON API</p>
+<p class="podnadpis">Nadpis - bude dodán z JSON API</p>
 <p class="text">Popisek bude dodán z JSON API - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 </p>
 
@@ -129,4 +124,10 @@ filter:transformY(-0.25rem);
 display:block;
 transform: translateY(0.1rem);
 }
+
+.podnadpis
+{
+font-family:"nadpis",sans-serif;
+}
+
 </style>

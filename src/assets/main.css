@@ -1,11 +1,18 @@
 @font-face{
 font-display:fallback; /* vlastnost fontu, která zobrazí font se zpožděním 0.3s, kdy už by měl být načten - sníží se performace webu */
-font-family:"DuruSans"; /* vlastní název fontu, který se posléze bude dále používat v CSS */
-src:url("./text.woff2") format("woff2 supports variations"),url("./text.woff2") format("woff2-variations"),url("./text.woff2") format("woff2"),url("./text.woff") format("woff"); /* cesta k fontu se určuje vzhledem k umístění CSS souboru */
+font-family:"text"; /* vlastní název fontu, který se posléze bude dále používat v CSS */
+src:url("./DuruSans.woff2") format("woff2 supports variations"),url("./DuruSans.woff2") format("woff2-variations"),url("./DuruSans.woff2") format("woff2"),url("./DuruSans.woff") format("woff"); /* cesta k fontu se určuje vzhledem k umístění CSS souboru */
 font-weight:300 700; /* určuje rozsah šířky písma použitého v CSSku (v projektu) */
 font-style:normal;
 }  /* běžný text - jedna oda: pouze weight -  */
 
+@font-face{
+font-display:fallback; /* vlastnost fontu, která zobrazí font se zpožděním 0.3s, kdy už by měl být načten - sníží se performace webu */
+font-family:"nadpis"; /* vlastní název fontu, který se posléze bude dále používat v CSS */
+src:url("../font/Tektur.woff2") format("woff2 supports variations"),url("../font/Tektur.woff2") format("woff2-variations"),url("../font/Tektur.woff2") format("woff2"),url("../font/Tektur.woff") format("woff"); /* cesta k fontu se určuje vzhledem k umístění CSS souboru */
+font-weight:400 900; /* určuje rozsah šířky písma použitého v CSSku (v projektu) */
+font-style:normal;
+}
 
 
 html{
@@ -180,10 +187,16 @@ body
 {
 color:black;
 background-color:white;
-font-family:"DuruSans",serif;
+font-family:"text",serif;
 font-size:100%;
 margin:0;
 padding:0;
+}
+
+h1
+{
+font-size:2.5rem;
+font-family:"nadpis",sans-serif;
 }
 
 p
@@ -226,9 +239,10 @@ font-weight:500;
 cursor:pointer;
 }
 
-img
+img,svg
 {
 width:100%;
+max-width:100%;
 height:auto;
 }
 
