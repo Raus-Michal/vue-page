@@ -9,7 +9,7 @@ font-style:normal;
 @font-face{
 font-display:fallback; /* vlastnost fontu, která zobrazí font se zpožděním 0.3s, kdy už by měl být načten - sníží se performace webu */
 font-family:"nadpis"; /* vlastní název fontu, který se posléze bude dále používat v CSS */
-src:url("../font/Tektur.woff2") format("woff2 supports variations"),url("../font/Tektur.woff2") format("woff2-variations"),url("../font/Tektur.woff2") format("woff2"),url("../font/Tektur.woff") format("woff"); /* cesta k fontu se určuje vzhledem k umístění CSS souboru */
+src:url("./Tektur.woff2") format("woff2 supports variations"),url("./Tektur.woff2") format("woff2-variations"),url("./Tektur.woff2") format("woff2"),url("./Tektur.woff") format("woff"); /* cesta k fontu se určuje vzhledem k umístění CSS souboru */
 font-weight:400 900; /* určuje rozsah šířky písma použitého v CSSku (v projektu) */
 font-style:normal;
 }
