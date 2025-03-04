@@ -1,9 +1,10 @@
 <template>
 
+<div class="cen">
  <div class="con-clanky">
     <KartaClanku  v-for="(item, index) in karty" :key="index" :cesta="item.src" :nadpis="item.nadpis" :title="item.title" />
   </div>
-
+</div>
 
 
 </template>
@@ -23,33 +24,31 @@ const name = 'Seznam';
 <style scoped>
 
 .con-clanky {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  height: auto;
-  margin: 5rem 0;
+  column-width:300px; /* Sloupce budou mít min. šířku 300px */
+  column-gap:0; /* Mezera mezi sloupci */
+  margin:0;
+  max-width:300px; /* Maximální šířka kontejneru */
 }
 
 /* pokud je obrazovka větší než */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 660px) {
   .con-clanky {
-    columns: 2;
-    height: auto;
-    gap: 1rem;
+    max-width:630px; /* Maximální šířka kontejneru */
+     padding-left:10px;
   }
 }
 
 /* pokud je obrazovka větší než */
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 990px) {
   .con-clanky {
-    columns: 3;
+  max-width:970px; /* Maximální šířka kontejneru */
+  padding-left:15px;
   }
 }
 
-/* pokud je obrazovka větší než */
-@media only screen and (min-width: 1000px) {
-  .con-clanky {
-    margin: 5rem 15vw;
-  }
+.cen
+{
+display:flex;
+justify-content:center;
 }
 </style>

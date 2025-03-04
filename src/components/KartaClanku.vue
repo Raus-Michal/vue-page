@@ -1,4 +1,5 @@
 <template>
+<div class="obal">
 <div class="karta">
 <div class="con">
 
@@ -24,7 +25,7 @@
 </div>
 
 </div>
-
+</div>
 
 </template>
 
@@ -45,10 +46,18 @@ const name = 'KartaClanku';
 
 <style scoped>
 
+.obal
+{
+  display: inline-block; /* Zajistí, že karta zůstane celá v jednom sloupci */
+  width: 300px; /* Přizpůsobení šířce sloupce */
+  break-inside: avoid; /* Zabraňuje zalomení */
+  margin-bottom: 1.5rem; /* Mezera mezi kartami */
+}
+
 .karta
 {
 display:flex;
-width:300px;
+width:100%;
 height:auto;
 background-color:transparent;
 margin-bottom:1rem;
@@ -63,7 +72,6 @@ text-transform:uppercase;
 {
 display:flex;
 flex-wrap:wrap;
-margin-bottom:3rem;
 }
 
 .con-other
