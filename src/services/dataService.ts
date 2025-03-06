@@ -12,6 +12,7 @@ export interface Produkt {
 export interface Karty {
   id: number;
   src: string;
+  src2: string;
   title: string;
   nadpis: string;
 }

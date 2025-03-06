@@ -5,7 +5,7 @@
 
 <div class="cen">
   <div class="con-clanky">
-    <KartaClanku  v-for="(item, index) in karty" :key="index" :cesta="item.src" :nadpis="item.nadpis" :title="item.title" />
+    <KartaClanku v-for="(item, index) in karty" :key="index" :index="index" :cesta="item.src" :cesta2="item.src2" :nadpis="item.nadpis" :title="item.title" />
   </div>
     </div>
 </template>
@@ -18,7 +18,6 @@ import KartaClanku from '../components/KartaClanku.vue';
 import { useDataLoader } from "@/services/dataService";
 
 const { produkty, karty } = useDataLoader();
-
 </script>
 
 <style scoped>

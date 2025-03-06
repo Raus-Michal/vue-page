@@ -12,9 +12,17 @@ __VLS_asFunctionalElement(__VLS_intrinsicElements.header, __VLS_intrinsicElement
 __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
     ...{ class: "logo-box" },
 });
-__VLS_asFunctionalElement(__VLS_intrinsicElements.img, __VLS_intrinsicElements.img)({
-    src: "./assets/logo.svg",
-    alt: "logo webu",
+__VLS_asFunctionalElement(__VLS_intrinsicElements.svg, __VLS_intrinsicElements.svg)({
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 261.76 226.69",
+});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.path)({
+    d: "M161.096.001l-30.225 52.351L100.647.001H-.005l130.877 226.688L261.749.001z",
+    fill: "#41b883",
+});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.path)({
+    d: "M161.096.001l-30.225 52.351L100.647.001H52.346l78.526 136.01L209.398.001z",
+    fill: "#34495e",
 });
 __VLS_asFunctionalElement(__VLS_intrinsicElements.nav, __VLS_intrinsicElements.nav)({});
 const __VLS_0 = {}.RouterLink;

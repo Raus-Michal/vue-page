@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/Home.vue';
 import Seznam from '../views/Seznam.vue';
 import Details from '../views/Details.vue';
+import Detail from '../views/Detail.vue';
+
 
 // Definice cest a jejich komponent
 const routes = [
@@ -16,9 +18,15 @@ const routes = [
     component: Seznam
   },
   {
-    path: '/details',  // Opravený překlep
+    path: '/details/',  // Opravený překlep
     name: 'Details',
     component: Details
+  },
+  {
+    path: '/detail/:id', // Definujte dynamickou trasu s parametrem
+    name: 'Detail',
+    component: Detail,
+    props: route => ({ index: route.query.index, cesta: route.query.cesta, cesta2: route.query.cesta2 , title: route.query.title , nadpis: route.query.nadpis }) // Definujte props jako query parameters
   }
 ];
 
