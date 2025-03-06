@@ -33,7 +33,10 @@ const routes = [
 // Vytvoření routeru
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL), // Používá HTML5 History API
-  routes
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    return { top: 0, behavior: 'smooth' }; // Posun na začátek s animací
+  }
 });
 
 export default router;

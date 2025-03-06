@@ -1,12 +1,10 @@
-import { useRoute } from 'vue-router';
-const route = useRoute();
-// Přímé získání parametrů a dotazů z route s ošetřením proti undefined
-const id = route.params.id ?? "";
-const index = route.query.index ?? "";
-const cesta = route.query.cesta ?? "";
-const cesta2 = route.query.cesta2 ?? "";
-const title = route.query.title ?? "";
-const nadpis = route.query.nadpis ?? "";
+const __VLS_props = defineProps({
+    index: String,
+    cesta: String,
+    cesta2: String,
+    title: String,
+    nadpis: String
+});
 ; /* PartiallyEnd: #3632/scriptSetup.vue */
 const __VLS_ctx = {};
 let __VLS_components;
@@ -125,17 +123,26 @@ __VLS_asFunctionalElement(__VLS_intrinsicElements.p, __VLS_intrinsicElements.p)(
 var __VLS_dollars;
 const __VLS_self = (await import('vue')).defineComponent({
     setup() {
-        return {
-            cesta: cesta,
-            cesta2: cesta2,
-            title: title,
-            nadpis: nadpis,
-        };
+        return {};
+    },
+    props: {
+        index: String,
+        cesta: String,
+        cesta2: String,
+        title: String,
+        nadpis: String
     },
 });
 export default (await import('vue')).defineComponent({
     setup() {
         return {};
+    },
+    props: {
+        index: String,
+        cesta: String,
+        cesta2: String,
+        title: String,
+        nadpis: String
     },
 });
 ; /* PartiallyEnd: #4569/main.vue */

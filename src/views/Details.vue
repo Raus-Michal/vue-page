@@ -1,7 +1,7 @@
 <template>
 
 <div class="con-h">    
-<h1>Detaily našeho blogu o&nbsp;cestování&nbsp;městy</h1>
+<h1>Detaily našeho blogu o&nbsp;cestování městy</h1>
 </div>
 
 <div class="con-c">
