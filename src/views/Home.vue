@@ -1,3 +1,13 @@
+<script setup lang="ts">
+
+import KartaProduktu from '../components/KartaProduktu.vue';
+import KartaClanku from '../components/KartaClanku.vue';
+
+import { useDataLoader } from "@/services/dataService";
+
+const { produkty, karty } = useDataLoader();
+</script>
+
 <template>
   <div class="flex">
     <KartaProduktu v-for="(item, index) in produkty" :key="index" :cesta="item.src" :nadpis="item.nadpis" :title="item.title" />
@@ -10,15 +20,6 @@
     </div>
 </template>
 
-<script setup lang="ts">
-
-import KartaProduktu from '../components/KartaProduktu.vue';
-import KartaClanku from '../components/KartaClanku.vue';
-
-import { useDataLoader } from "@/services/dataService";
-
-const { produkty, karty } = useDataLoader();
-</script>
 
 <style scoped>
 .flex {
