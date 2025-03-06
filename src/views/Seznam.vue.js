@@ -1,4 +1,4 @@
-import KartaClanku from '../components/KartaClanku.vue';
+import Monsory from '../components/Monsory.vue';
 import { useDataLoader } from "@/services/dataService";
 const { produkty, karty } = useDataLoader();
 const name = 'Seznam';
@@ -6,43 +6,23 @@ const name = 'Seznam';
 const __VLS_ctx = {};
 let __VLS_components;
 let __VLS_directives;
-/** @type {__VLS_StyleScopedClasses['con-clanky']} */ ;
-/** @type {__VLS_StyleScopedClasses['con-clanky']} */ ;
 // CSS variable injection 
 // CSS variable injection end 
-__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
-    ...{ class: "cen" },
-});
-__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
-    ...{ class: "con-clanky" },
-});
-for (const [item, index] of __VLS_getVForSourceType((__VLS_ctx.karty))) {
-    /** @type {[typeof KartaClanku, ]} */ ;
-    // @ts-ignore
-    const __VLS_0 = __VLS_asFunctionalComponent(KartaClanku, new KartaClanku({
-        key: (index),
-        index: (index),
-        cesta: (item.src),
-        cesta2: (item.src2),
-        nadpis: (item.nadpis),
-        title: (item.title),
-    }));
-    const __VLS_1 = __VLS_0({
-        key: (index),
-        index: (index),
-        cesta: (item.src),
-        cesta2: (item.src2),
-        nadpis: (item.nadpis),
-        title: (item.title),
-    }, ...__VLS_functionalComponentArgsRest(__VLS_0));
-}
-/** @type {__VLS_StyleScopedClasses['cen']} */ ;
-/** @type {__VLS_StyleScopedClasses['con-clanky']} */ ;
+/** @type {[typeof Monsory, ]} */ ;
+// @ts-ignore
+const __VLS_0 = __VLS_asFunctionalComponent(Monsory, new Monsory({
+    karty: (__VLS_ctx.karty),
+}));
+const __VLS_1 = __VLS_0({
+    karty: (__VLS_ctx.karty),
+}, ...__VLS_functionalComponentArgsRest(__VLS_0));
+var __VLS_3 = {};
+var __VLS_2;
 var __VLS_dollars;
 const __VLS_self = (await import('vue')).defineComponent({
     setup() {
         return {
-            KartaClanku: KartaClanku,
+            Monsory: Monsory,
             karty: karty,
         };
     },

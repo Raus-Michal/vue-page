@@ -48,54 +48,61 @@ const goToNewPage = () => {
 </template>
 
 <style scoped>
-.obal {
-  display: inline-block; /* Zajistí, že karta zůstane celá v jednom sloupci */
-  width: 300px; /* Přizpůsobení šířce sloupce */
-  break-inside: avoid; /* Zabraňuje zalomení */
-  margin-bottom: 1.5rem; /* Mezera mezi kartami */
+.obal
+{
+display:inline-block; /* Zajistí, že karta zůstane celá v jednom sloupci */
+width:300px; /* Přizpůsobení šířce sloupce */
+break-inside:avoid; /* Zabraňuje zalomení */
+margin-bottom:1.5rem; /* Mezera mezi kartami */
 }
 
-.karta {
-  display: flex;
-  width: 100%;
-  height: auto;
-  background-color: transparent;
-  margin-bottom: 1rem;
+.karta
+{
+display:flex;
+width:100%;
+height:auto;
+background-color:transparent;
+margin-bottom: 1rem;
 }
 
-.big {
-  text-transform: uppercase;
+.big
+{
+text-transform: uppercase;
 }
 
-.con {
-  display: flex;
-  flex-wrap: wrap;
+.con
+{
+display:flex;
+flex-wrap:wrap;
 }
 
-.con-other {
-  align-self: flex-end;
+.con-other
+{
+align-self: flex-end;
 }
 
-.con div p {
-  color: black;
-  font-size: 1.5rem;
-  font-weight: 500;
-  text-align: center;
-  margin-bottom: 2rem;
+.con div p
+{
+color:black;
+font-size:1.5rem;
+font-weight:500;
+text-align:center;
 }
 
-.con div p:first-child {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  margin-bottom: 0;
-  font-weight: 200;
+.con div p:first-child
+{
+font-size: 0.8rem;
+text-transform: uppercase;
+margin-bottom: 0;
+font-weight: 200;
 }
 
-.con div p.text {
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-  font-weight: 200;
-  text-align: justify;
+.con div p.text
+{
+font-size: 0.9rem;
+margin-bottom: 1rem;
+font-weight: 200;
+text-align: justify;
 }
 
 .con-button {
@@ -119,12 +126,12 @@ const goToNewPage = () => {
 }
 
 .podnadpis {
-  font-family: "nadpis", sans-serif;
+font-family: "nadpis", sans-serif;
 }
 
 .delic
 {
-margin:0 0 2rem 0;
+margin:0 0 1rem 0;
 display:flex;
 justify-content:center;
 }

@@ -1,19 +1,23 @@
-import KartaProduktu from '../components/KartaProduktu.vue';
-import { useDataLoader } from "@/services/dataService";
-const { produkty, karty } = useDataLoader();
+import KartaClanku from "./KartaClanku.vue";
+const __VLS_props = defineProps();
 ; /* PartiallyEnd: #3632/scriptSetup.vue */
 const __VLS_ctx = {};
 let __VLS_components;
 let __VLS_directives;
+/** @type {__VLS_StyleScopedClasses['con-clanky']} */ ;
+/** @type {__VLS_StyleScopedClasses['con-clanky']} */ ;
 // CSS variable injection 
 // CSS variable injection end 
 __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
-    ...{ class: "flex" },
+    ...{ class: "cen" },
 });
-for (const [item, index] of __VLS_getVForSourceType((__VLS_ctx.produkty))) {
-    /** @type {[typeof KartaProduktu, ]} */ ;
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    ...{ class: "con-clanky" },
+});
+for (const [item, index] of __VLS_getVForSourceType((__VLS_ctx.karty))) {
+    /** @type {[typeof KartaClanku, ]} */ ;
     // @ts-ignore
-    const __VLS_0 = __VLS_asFunctionalComponent(KartaProduktu, new KartaProduktu({
+    const __VLS_0 = __VLS_asFunctionalComponent(KartaClanku, new KartaClanku({
         key: (index),
         index: (index),
         cesta: (item.src),
@@ -30,29 +34,21 @@ for (const [item, index] of __VLS_getVForSourceType((__VLS_ctx.produkty))) {
         title: (item.title),
     }, ...__VLS_functionalComponentArgsRest(__VLS_0));
 }
-const __VLS_3 = {}.Monsory;
-/** @type {[typeof __VLS_components.Monsory, ]} */ ;
-// @ts-ignore
-const __VLS_4 = __VLS_asFunctionalComponent(__VLS_3, new __VLS_3({
-    karty: (__VLS_ctx.karty),
-}));
-const __VLS_5 = __VLS_4({
-    karty: (__VLS_ctx.karty),
-}, ...__VLS_functionalComponentArgsRest(__VLS_4));
-/** @type {__VLS_StyleScopedClasses['flex']} */ ;
+/** @type {__VLS_StyleScopedClasses['cen']} */ ;
+/** @type {__VLS_StyleScopedClasses['con-clanky']} */ ;
 var __VLS_dollars;
 const __VLS_self = (await import('vue')).defineComponent({
     setup() {
         return {
-            KartaProduktu: KartaProduktu,
-            produkty: produkty,
-            karty: karty,
+            KartaClanku: KartaClanku,
         };
     },
+    __typeProps: {},
 });
 export default (await import('vue')).defineComponent({
     setup() {
         return {};
     },
+    __typeProps: {},
 });
 ; /* PartiallyEnd: #4569/main.vue */

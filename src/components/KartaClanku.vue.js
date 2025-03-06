@@ -17,6 +17,7 @@ let __VLS_directives;
 /** @type {__VLS_StyleScopedClasses['con']} */ ;
 /** @type {__VLS_StyleScopedClasses['con']} */ ;
 /** @type {__VLS_StyleScopedClasses['con']} */ ;
+/** @type {__VLS_StyleScopedClasses['delic']} */ ;
 // CSS variable injection 
 // CSS variable injection end 
 __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
@@ -55,6 +56,10 @@ __VLS_asFunctionalElement(__VLS_intrinsicElements.p, __VLS_intrinsicElements.p)(
     ...{ class: "podnadpis" },
 });
 (__VLS_ctx.nadpis);
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    ...{ class: "delic" },
+});
+__VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({});
 __VLS_asFunctionalElement(__VLS_intrinsicElements.p, __VLS_intrinsicElements.p)({
     ...{ class: "text" },
 });
@@ -74,6 +79,7 @@ __VLS_asFunctionalElement(__VLS_intrinsicElements.span, __VLS_intrinsicElements.
 /** @type {__VLS_StyleScopedClasses['con-other']} */ ;
 /** @type {__VLS_StyleScopedClasses['big']} */ ;
 /** @type {__VLS_StyleScopedClasses['podnadpis']} */ ;
+/** @type {__VLS_StyleScopedClasses['delic']} */ ;
 /** @type {__VLS_StyleScopedClasses['text']} */ ;
 /** @type {__VLS_StyleScopedClasses['con-button']} */ ;
 var __VLS_dollars;
