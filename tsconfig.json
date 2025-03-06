@@ -1,36 +1,41 @@
 {
   "compilerOptions": {
-    "strict": true,                                 // Aktivuje přísné kontroly typů
-    "forceConsistentCasingInFileNames": true,       // Zajišťuje konzistentní pojmenování souborů
-    "target": "esnext",                             // Určuje cílový jazyk ESNext
-    "module": "esnext",                             // Určuje formát modulu
-    "moduleResolution": "node",                     // Rozpoznávání modulů podle Node.js
-    "jsx": "preserve",                              // Zachovává JSX v souborech
-    "esModuleInterop": true,                        // Umožňuje interoperabilitu mezi ES moduly a CommonJS
-    "skipLibCheck": true,                           // Přeskakuje kontrolu knihoven
-    "resolveJsonModule": true,                      // Umožňuje import JSON souborů
-    "lib": ["esnext", "dom"],                       // Používá moderní knihovny pro ESNext a DOM
-    "declaration": true,                            // Povolení generování .d.ts souborů
-    "declarationDir": "./types",                    // Určuje adresář pro generované .d.ts soubory
-    "emitDeclarationOnly": false,                   // Neumožňuje emitování pouze deklarací
-    "composite": true                               // Povolení kompozitních projektů (pro referenční projekty)
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "lib": ["esnext", "dom"],
+    "declaration": true,
+    "declarationDir": "./types",
+    "emitDeclarationOnly": false,
+    "composite": true,
+    "types": ["vite/client"],    
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "files": [
-    "vue-shims.d.ts"                                // Vue specifické šimy
+    "vue-shims.d.ts"
   ],
   "references": [
     {
-      "path": "./tsconfig.app.json"                 // Referencování souboru tsconfig.app.json
+      "path": "./tsconfig.app.json"
     }
   ],
   "include": [
-    "src/**/*.ts",                                  // Zahrnutí TypeScript souborů
-    "src/**/*.tsx",                                 // Zahrnutí TypeScript React souborů
-    "src/**/*.vue"                                  // Zahrnutí Vue souborů
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"
   ],
   "exclude": [
-    "node_modules",                                 // Exkluze node_modules
-    "dist",                                         // Exkluze dist složky
-    "src/**/*.d.ts"                                 // Exkluze generovaných .d.ts souborů
+    "node_modules",
+    "dist",
+    "src/**/*.d.ts"
   ]
 }
