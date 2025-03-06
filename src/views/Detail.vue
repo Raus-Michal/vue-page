@@ -1,17 +1,13 @@
 <script setup lang="ts">
-import { useRoute } from 'vue-router';
-
-const route = useRoute();
-
-// Přímé získání parametrů a dotazů z route s ošetřením proti undefined
-const id = route.params.id ?? "";
-const index = route.query.index ?? "";
-const cesta = route.query.cesta ?? "";
-const cesta2 = route.query.cesta2 ?? "";
-const title = route.query.title ?? "";
-const nadpis = route.query.nadpis ?? "";
-
+defineProps({
+  index: String,
+  cesta: String,
+  cesta2: String,
+  title: String,
+  nadpis: String
+});
 </script>
+
 
 <template>
   <div class="con-h">    
