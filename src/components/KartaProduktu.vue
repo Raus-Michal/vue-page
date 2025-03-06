@@ -1,27 +1,40 @@
 <script setup lang="ts">
+import { useRouter } from 'vue-router';
+
 const props = defineProps<{
+  index: number;
   cesta: string;
+  cesta2: string;
   title: string;
   nadpis: string;
 }>();
 
-const name = 'KartaProduktu';
+const router = useRouter();
+
+const goToNewPage = () => {
+  router.push({
+    name: 'Detail',
+    params: { id: String(props.index) },
+    query: { index: props.index, cesta: props.cesta, cesta2: props.cesta2, title: props.title, nadpis: props.nadpis }
+  });
+};
+
 </script>
 
 <template>
   <div class="karta">
     <figure class="img-produktu">
       <picture>
-        <source :srcset="`${props.cesta ?? ''}.avif`" type="image/avif">
-        <source :srcset="`${props.cesta ?? ''}.webp`" type="image/webp">
-        <img :src="`${props.cesta ?? ''}.jpg`" width="400" height="500" :alt="`Obrázek ${props.title}`" loading="lazy">
+        <source :srcset="`${cesta ?? ''}.avif`" type="image/avif">
+        <source :srcset="`${cesta ?? ''}.webp`" type="image/webp">
+        <img :src="`${cesta ?? ''}.jpg`" width="400" height="500" :alt="`Obrázek ${props.title}`" loading="lazy">
       </picture>
     </figure>
     <div class="con">
-      <p class="podnadpis">{{ props.nadpis }}</p>
-      <p>{{ props.title }}</p>
+      <p class="podnadpis">{{ nadpis }}</p>
+      <p>{{ title }}</p>
       <div>
-        <button type="button" title="Číst víc"><span>Read More</span></button>
+        <button type="button" @click="goToNewPage" title="Číst víc"><span>Read More</span></button>
       </div>
     </div>
   </div>
@@ -37,7 +50,8 @@ const name = 'KartaProduktu';
   width: 100%;
   min-width: 280px;
   max-width: 400px;
-  height: 500px;
+  height: auto;
+  aspect-ratio:1/1.25;
   background-color: transparent;
 }
 

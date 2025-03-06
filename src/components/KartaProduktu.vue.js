@@ -1,5 +1,13 @@
+import { useRouter } from 'vue-router';
 const props = defineProps();
-const name = 'KartaProduktu';
+const router = useRouter();
+const goToNewPage = () => {
+    router.push({
+        name: 'Detail',
+        params: { id: String(props.index) },
+        query: { index: props.index, cesta: props.cesta, cesta2: props.cesta2, title: props.title, nadpis: props.nadpis }
+    });
+};
 ; /* PartiallyEnd: #3632/scriptSetup.vue */
 const __VLS_ctx = {};
 let __VLS_components;
@@ -18,15 +26,15 @@ __VLS_asFunctionalElement(__VLS_intrinsicElements.figure, __VLS_intrinsicElement
 });
 __VLS_asFunctionalElement(__VLS_intrinsicElements.picture, __VLS_intrinsicElements.picture)({});
 __VLS_asFunctionalElement(__VLS_intrinsicElements.source, __VLS_intrinsicElements.source)({
-    srcset: (`${props.cesta ?? ''}.avif`),
+    srcset: (`${__VLS_ctx.cesta ?? ''}.avif`),
     type: "image/avif",
 });
 __VLS_asFunctionalElement(__VLS_intrinsicElements.source, __VLS_intrinsicElements.source)({
-    srcset: (`${props.cesta ?? ''}.webp`),
+    srcset: (`${__VLS_ctx.cesta ?? ''}.webp`),
     type: "image/webp",
 });
 __VLS_asFunctionalElement(__VLS_intrinsicElements.img, __VLS_intrinsicElements.img)({
-    src: (`${props.cesta ?? ''}.jpg`),
+    src: (`${__VLS_ctx.cesta ?? ''}.jpg`),
     width: "400",
     height: "500",
     alt: (`Obrázek ${props.title}`),
@@ -38,11 +46,12 @@ __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.d
 __VLS_asFunctionalElement(__VLS_intrinsicElements.p, __VLS_intrinsicElements.p)({
     ...{ class: "podnadpis" },
 });
-(props.nadpis);
+(__VLS_ctx.nadpis);
 __VLS_asFunctionalElement(__VLS_intrinsicElements.p, __VLS_intrinsicElements.p)({});
-(props.title);
+(__VLS_ctx.title);
 __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({});
 __VLS_asFunctionalElement(__VLS_intrinsicElements.button, __VLS_intrinsicElements.button)({
+    ...{ onClick: (__VLS_ctx.goToNewPage) },
     type: "button",
     title: "Číst víc",
 });
@@ -54,7 +63,9 @@ __VLS_asFunctionalElement(__VLS_intrinsicElements.span, __VLS_intrinsicElements.
 var __VLS_dollars;
 const __VLS_self = (await import('vue')).defineComponent({
     setup() {
-        return {};
+        return {
+            goToNewPage: goToNewPage,
+        };
     },
     __typeProps: {},
 });

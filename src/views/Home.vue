@@ -10,7 +10,7 @@ const { produkty, karty } = useDataLoader();
 
 <template>
   <div class="flex">
-    <KartaProduktu v-for="(item, index) in produkty" :key="index" :cesta="item.src" :nadpis="item.nadpis" :title="item.title" />
+    <KartaProduktu v-for="(item, index) in produkty" :key="index" :index="index" :cesta="item.src" :cesta2="item.src2" :nadpis="item.nadpis" :title="item.title" />
   </div>
 
 <div class="cen">

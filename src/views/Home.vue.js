@@ -18,13 +18,17 @@ for (const [item, index] of __VLS_getVForSourceType((__VLS_ctx.produkty))) {
     // @ts-ignore
     const __VLS_0 = __VLS_asFunctionalComponent(KartaProduktu, new KartaProduktu({
         key: (index),
+        index: (index),
         cesta: (item.src),
+        cesta2: (item.src2),
         nadpis: (item.nadpis),
         title: (item.title),
     }));
     const __VLS_1 = __VLS_0({
         key: (index),
+        index: (index),
         cesta: (item.src),
+        cesta2: (item.src2),
         nadpis: (item.nadpis),
         title: (item.title),
     }, ...__VLS_functionalComponentArgsRest(__VLS_0));

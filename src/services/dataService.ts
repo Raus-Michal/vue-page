@@ -5,6 +5,7 @@ import { ref, onMounted } from "vue";
 export interface Produkt {
   id: number;
   src: string;
+  src2: string;
   title: string;
   nadpis: string;
 }
