@@ -34,6 +34,9 @@ const goToNewPage = () => {
         <div class="con-other">
           <p class="big">Travel</p>
           <p class="podnadpis">{{ nadpis }}</p>
+              <div class="delic">
+                  <div> </div>
+              </div>
           <p class="text">{{ title }}</p>
           <div class="con-button">
             <button type="button" @click="goToNewPage" title="Číst víc"><span>Read More</span></button>
@@ -84,7 +87,7 @@ const goToNewPage = () => {
 .con div p:first-child {
   font-size: 0.8rem;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   font-weight: 200;
 }
 
@@ -118,4 +121,18 @@ const goToNewPage = () => {
 .podnadpis {
   font-family: "nadpis", sans-serif;
 }
+
+.delic
+{
+margin:0 0 2rem 0;
+display:flex;
+justify-content:center;
+}
+
+.delic div
+{
+border-bottom:2px solid gray;
+width:30%;
+}
+
 </style>
