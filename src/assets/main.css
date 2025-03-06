@@ -248,7 +248,9 @@ height:auto;
 
 .logo-box
 {
-width:5rem;
+width:3rem;
+width:calc(2rem + 5vw);
+max-width:5rem;
 height:auto;
 }
 
