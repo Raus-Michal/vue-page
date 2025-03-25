@@ -48,9 +48,6 @@
 
 <script setup lang="ts">
 
-
-const name = 'Details';
-
 </script>
 
 <style scoped>

@@ -1,8 +1,19 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory , RouteLocationNormalizedLoaded } from 'vue-router';
 import Home from '../views/Home.vue';
 import Seznam from '../views/Seznam.vue';
 import Details from '../views/Details.vue';
 import Detail from '../views/Detail.vue';
+
+
+interface ImportMetaEnv {
+  readonly BASE_URL: string; // Definujte BASE_URL jako string
+  // Přidejte další vlastní proměnné prostředí, pokud je používáte:
+  readonly VITE_API_URL?: string; // Příklad
+}
+
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
+}
 
 
 // Definice cest a jejich komponent
@@ -26,7 +37,7 @@ const routes = [
     path: '/detail/:id', // Definujte dynamickou trasu s parametrem
     name: 'Detail',
     component: Detail,
-    props: route => ({ index: route.query.index, cesta: route.query.cesta, cesta2: route.query.cesta2 , title: route.query.title , nadpis: route.query.nadpis }) // Definujte props jako query parameters
+    props: (route: RouteLocationNormalizedLoaded) => ({ index: route.query.index as number, cesta: route.query.cesta as string, cesta2: route.query.cesta2 as string, title: route.query.title as string, nadpis: route.query.nadpis as string}) // Definujte props jako query parameters
   }
 ];
 
