@@ -18,13 +18,13 @@ defineProps({
     <div class="con-max">
       <figure class="img-box">
         <picture>
-          <source media="(max-width:400px)" :srcset="`${cesta}.avif`" type="image/avif">
-          <source media="(min-width:400px)" :srcset="`${cesta2}.avif`" type="image/avif">
-          <source media="(max-width:400px)" :srcset="`${cesta}.webp`" type="image/webp">
-          <source media="(min-width:400px)" :srcset="`${cesta2}.webp`" type="image/webp">
-          <source media="(max-width:400px)" :srcset="`${cesta}.jpg`" type="image/jpg">
-          <source media="(min-width:400px)" :srcset="`${cesta2}.jpg`" type="image/jpg">
-          <img width="400" height="200" :src="`${cesta2}.jpg`" :alt="`Obrázek ${nadpis}`" loading="lazy">
+          <source media="(max-width:400px)" :srcset="`../${cesta}.avif`" type="image/avif">
+          <source media="(min-width:400px)" :srcset="`../${cesta2}.avif`" type="image/avif">
+          <source media="(max-width:400px)" :srcset="`../${cesta}.webp`" type="image/webp">
+          <source media="(min-width:400px)" :srcset="`../${cesta2}.webp`" type="image/webp">
+          <source media="(max-width:400px)" :srcset="`../${cesta}.jpg`" type="image/jpg">
+          <source media="(min-width:400px)" :srcset="`../${cesta2}.jpg`" type="image/jpg">
+          <img width="400" height="200" :src="`../${cesta2}.jpg`" :alt="`Obrázek ${nadpis}`" loading="lazy">
         </picture>
       </figure>
 
@@ -38,13 +38,13 @@ defineProps({
 
       <figure class="img-box">
         <picture>
-          <source media="(max-width:400px)" :srcset="`${cesta}.avif`" type="image/avif">
-          <source media="(min-width:400px)" :srcset="`${cesta2}.avif`" type="image/avif">
-          <source media="(max-width:400px)" :srcset="`${cesta}.webp`" type="image/webp">
-          <source media="(min-width:400px)" :srcset="`${cesta2}.webp`" type="image/webp">
-          <source media="(max-width:400px)" :srcset="`${cesta}.jpg`" type="image/jpg">
-          <source media="(min-width:400px)" :srcset="`${cesta2}.jpg`" type="image/jpg">
-          <img width="400" height="200" :src="`${cesta2}.jpg`" :alt="`Obrázek ${nadpis}`" loading="lazy">
+          <source media="(max-width:400px)" :srcset="`../${cesta}.avif`" type="image/avif">
+          <source media="(min-width:400px)" :srcset="`../${cesta2}.avif`" type="image/avif">
+          <source media="(max-width:400px)" :srcset="`../${cesta}.webp`" type="image/webp">
+          <source media="(min-width:400px)" :srcset="`../${cesta2}.webp`" type="image/webp">
+          <source media="(max-width:400px)" :srcset="`../${cesta}.jpg`" type="image/jpg">
+          <source media="(min-width:400px)" :srcset="`../${cesta2}.jpg`" type="image/jpg">
+          <img width="400" height="200" :src="`../${cesta2}.jpg`" :alt="`Obrázek ${nadpis}`" loading="lazy">
         </picture>
       </figure>
 

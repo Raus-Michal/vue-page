@@ -18,10 +18,10 @@ export const fetchJSON = async (src_json) => {
     }
 };
 // Funkce pro spuštění při načtení komponenty
-export const useDataLoader = () => {
+export const useDataLoader = (src="data/") => {
     onMounted(async () => {
-        produkty.value = await fetchJSON("/data/produkty.json");
-        karty.value = await fetchJSON("/data/karty.json");
+        produkty.value = await fetchJSON(`${src}produkty.json`);
+        karty.value = await fetchJSON(`${src}karty.json`);
         console.log("Načtené produkty:", produkty.value);
         console.log("Načtené karty:", karty.value);
     });
