@@ -11,14 +11,25 @@ const props = defineProps<{
 
 const router = useRouter();
 
+const sanitizePath = (path: string) => {
+  return path.replace(/^(\.\.\/)+/, ""); // Odstraní všechna "../" pouze na začátku řetězce
+};
+
 const goToNewPage = () => {
   router.push({
     name: 'Detail',
     params: { id: String(props.index) },
-    query: { index: props.index, cesta: props.cesta, cesta2: props.cesta2, title: props.title, nadpis: props.nadpis }
+    query: { 
+      index: props.index, 
+      cesta: sanitizePath(props.cesta), 
+      cesta2: sanitizePath(props.cesta2), 
+      title: props.title, 
+      nadpis: props.nadpis 
+    }
   });
 };
 </script>
+
 
 <template>
   <div class="obal">
